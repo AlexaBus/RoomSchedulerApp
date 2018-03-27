@@ -1,3 +1,5 @@
+ce am eu in tabela https://imgur.com/a/9xGq7
+
 CREATE SCHEMA roomschapp;
 
 CREATE TABLE `appointments` (
@@ -25,3 +27,4 @@ CREATE TABLE `rooms` (
   UNIQUE KEY `roomid_UNIQUE` (`roomid`),
   UNIQUE KEY `roomname_UNIQUE` (`roomname`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8
+
