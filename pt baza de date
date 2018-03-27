@@ -1,0 +1,27 @@
+CREATE SCHEMA roomschapp;
+
+CREATE TABLE `appointments` (
+  `appid` int(11) NOT NULL AUTO_INCREMENT,
+  `apprequester` varchar(45) DEFAULT NULL,
+  `approomid` int(11) DEFAULT NULL,
+  `appdate` timestamp NULL DEFAULT NULL,
+  `roomid` int(11) DEFAULT NULL,
+  PRIMARY KEY (`appid`),
+  UNIQUE KEY `appid_UNIQUE` (`appid`),
+  KEY `fk_appointments_rooms_idx` (`approomid`),
+  KEY `FKavoakvxsf9lig9g0i2av76wxn` (`roomid`),
+  CONSTRAINT `FKavoakvxsf9lig9g0i2av76wxn` FOREIGN KEY (`roomid`) REFERENCES `rooms` (`roomid`),
+  CONSTRAINT `FKm2xxokd3ovrvgpnl0xww5i8l3` FOREIGN KEY (`approomid`) REFERENCES `rooms` (`roomid`),
+  CONSTRAINT `fk_appointments_rooms` FOREIGN KEY (`approomid`) REFERENCES `rooms` (`roomid`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `rooms` (
+  `roomid` int(11) NOT NULL AUTO_INCREMENT,
+  `roomlocation` varchar(45) NOT NULL,
+  `roomname` varchar(200) NOT NULL,
+  `roomcapacity` int(11) DEFAULT NULL,
+  `roomhasprojector` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`roomid`),
+  UNIQUE KEY `roomid_UNIQUE` (`roomid`),
+  UNIQUE KEY `roomname_UNIQUE` (`roomname`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8
