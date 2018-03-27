@@ -4,6 +4,9 @@ in dao sunt clasele care tin selecturile si metodele cu care sunt aduse obiecte 
 in controller am pus:
 -objectservice care tine metode care leaga room de appointment
 -webcontroller care tine metode care mapeaza datele din baza de pagini ale aplicatiei
+dupa ce va creati baza de date trebuie sa inserati niste linii in tabele ca sa functioneze
+pentru /appointment va trebuie un link de genul
+http://localhost:8080/appointment?user=UserB&appdate=2018-03-24 15:00:00
 
 26032018 1735
 appointment si room din model au fost comentate si am pus in ele cam ce am reusit sa gasesc pe net
